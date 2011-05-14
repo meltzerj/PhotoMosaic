@@ -1,0 +1,15 @@
+<header>
+  <div>
+	<%= link_to "Photo Mosaic", root_path %>
+  </div>
+
+  <nav>
+  	<ul>
+	    <% if user_signed_in? %>
+  		  <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+        <% else %>	    
+  		  <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+  	</ul>
+  </nav>
+</header>
